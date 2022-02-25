@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/index.js"
+    "stop": "pm2 stop all",
+    "status": "pm2 list all",
+    "dev": "nodemon ./src/index.js",
+    "prod": "pm2 start ./src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +17,8 @@
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
     "instagram_mqtt": "^1.2.2",
-    "instagram-private-api": "^1.45.3"
+    "instagram-private-api": "^1.45.3",
+    "pm2": "^5.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

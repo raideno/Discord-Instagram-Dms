@@ -15,7 +15,7 @@ const createclient = async () => {
     if (!user) return null;
     else client.me = user;
 
-    await client.realtime.connect({ irisData: await client.feed.directInbox().request() });
+    await client.realtime.connect({ irisData: await client.feed.directInbox().request() }); /*To receive direct messages*/
 
     return client;
 }
